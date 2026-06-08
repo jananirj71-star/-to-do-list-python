@@ -10,6 +10,7 @@ Delete tasks
 Simple command-line interface
 
 💻 Code
+
 tasks = []
 
 while True:
@@ -20,13 +21,11 @@ while True:
     print("4. Delete Task")
     print("5. Exit")
 
-    choice = input("Enter your choice: ")
-
+   choice = input("Enter your choice: ")
     if choice == "1":
         task = input("Enter task: ")
         tasks.append(task)
         print("Task added successfully!")
-
     elif choice == "2":
         if not tasks:
             print("No tasks available.")
@@ -34,27 +33,21 @@ while True:
             print("\nTasks:")
             for i, task in enumerate(tasks, start=1):
                 print(f"{i}. {task}")
-
     elif choice == "3":
         for i, task in enumerate(tasks, start=1):
             print(f"{i}. {task}")
-
         num = int(input("Enter task number to update: "))
         new_task = input("Enter new task: ")
-        tasks[num - 1] = new_task
+        tasks[num-1]= new_task
         print("Task updated successfully!")
-
     elif choice == "4":
         for i, task in enumerate(tasks, start=1):
             print(f"{i}. {task}")
-
-        num = int(input("Enter task number to delete: "))
+       num = int(input("Enter task number to delete: "))
         tasks.pop(num - 1)
         print("Task deleted successfully!")
-
     elif choice == "5":
         print("Thank you!")
         break
-
     else:
         print("Invalid choice. Try again.")
