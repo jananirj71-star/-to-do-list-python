@@ -38,7 +38,7 @@ while True:
             print(f"{i}. {task}")
         num = int(input("Enter task number to update: "))
         new_task = input("Enter new task: ")
-        tasks[num-1]= new_task
+        tasks[n - 1]= new_task
         print("Task updated successfully!")
     elif choice == "4":
         for i, task in enumerate(tasks, start=1):
